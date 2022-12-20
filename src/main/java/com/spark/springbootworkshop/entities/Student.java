@@ -1,5 +1,6 @@
 package com.spark.springbootworkshop.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
@@ -26,6 +27,7 @@ public class Student {
 
     @ManyToOne()
     @JoinColumn(name = "idClassroom")
+    @JsonIgnoreProperties({"students"})
     Classroom classroom;
 
 
