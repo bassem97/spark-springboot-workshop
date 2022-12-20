@@ -19,8 +19,13 @@ public class Student {
 
     private String email;
 
+
     @Enumerated(EnumType.STRING)
     private GENDER gender;
+
+    @ManyToOne()
+    @JoinColumn(name = "idClassroom")
+    Classroom classroom;
 
 
 
