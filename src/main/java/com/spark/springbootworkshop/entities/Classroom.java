@@ -17,6 +17,7 @@ public class Classroom {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idClassroom;
 
+    @Column(unique = true)
     private String name;
 
     @OneToMany()

@@ -1,4 +1,4 @@
-package com.spark.springbootworkshop.services;
+package com.spark.springbootworkshop.services.student;
 
 import com.spark.springbootworkshop.entities.Student;
 import com.spark.springbootworkshop.repositories.StudentRepository;

@@ -1,7 +1,7 @@
 package com.spark.springbootworkshop.controllers;
 
 import com.spark.springbootworkshop.entities.Student;
-import com.spark.springbootworkshop.services.StudentService;
+import com.spark.springbootworkshop.services.student.StudentService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
