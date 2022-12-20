@@ -21,22 +21,22 @@ public class ClassroomController {
 
     @GetMapping("")     //    http://localhost:8080/classrooms
     public List<Classroom> findAllClassrooms() {
-        return classroomService.findAllClassrooms();
+        return classroomService.findAll();
     }
 
     @PostMapping("")// POST   http://localhost:8080/classrooms
     public Classroom addClassroom (@RequestBody Classroom classroom) throws Exception {
-        return classroomService.addClassroom(classroom);
+        return classroomService.add(classroom);
     }
 
     @PutMapping("/{id}")// PUT    http://localhost:8080/classrooms
     public Classroom updateClassroom (@RequestBody Classroom classroom,@PathVariable("id") Long idClassroom) throws Exception {
-        return classroomService.updateClassroom(classroom,idClassroom);
+        return classroomService.update(classroom,idClassroom);
     }
 
     @DeleteMapping("/{id}")
     public void deleteClassroom(@PathVariable("id") Long idClassroom){
-        classroomService.deleteClassroom(idClassroom);
+        classroomService.delete(idClassroom);
     }
 
 

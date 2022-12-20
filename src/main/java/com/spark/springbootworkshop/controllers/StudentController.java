@@ -22,22 +22,22 @@ public class StudentController {
 
     @GetMapping("")     //    http://localhost:8080/students
     public List<Student> findAllStudents() {
-        return studentService.findAllStudents();
+        return studentService.findAll();
     }
 
     @PostMapping("")// POST   http://localhost:8080/students
     public Student addStudent (@RequestBody Student student) throws Exception {
-        return studentService.addStudent(student);
+        return studentService.add(student);
     }
 
     @PutMapping("/{id}")// PUT    http://localhost:8080/students
     public Student updateStudent (@RequestBody Student student,@PathVariable("id") Long idStudent) throws Exception {
-        return studentService.updateStudent(student,idStudent);
+        return studentService.update(student,idStudent);
     }
 
     @DeleteMapping("/{id}")
     public void deleteStudent(@PathVariable("id") Long idStudent){
-        studentService.deleteStudent(idStudent);
+        studentService.delete(idStudent);
     }
 
 
