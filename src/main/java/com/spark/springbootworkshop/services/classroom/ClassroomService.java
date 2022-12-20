@@ -22,6 +22,7 @@ public class ClassroomService implements ICrudService<Classroom,Long> {
         return classroomRepository.findAll();
     }
 
+
     @Override
     public Classroom add(Classroom classroom) throws Exception {
         if(classroomRepository.existsByName(classroom.getName()))
